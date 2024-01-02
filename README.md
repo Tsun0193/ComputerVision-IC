@@ -63,12 +63,14 @@ conda activate cv
 
 // Clone and install the necessary packages
 cd <folder-path>
-git clone https://github.com/lvdthieu/Computer_Vision.git
+git clone https://github.com/Tsun0193/ComputerVision-IC.git
 pip install -r requirements.txt
 ```
-* Step 5: Download dataset:
+* Step 5: Download datasets from ImageNet and Intel Image Classification Challenge:
 ```
-kaggle datasets download --unzip thieuluu/cv-data
+cd <folder-path>/ComputerVision-IC
+kaggle competitions download -c imagenet-object-localization-challenge
+kaggle datasets download -d puneet6060/intel-image-classification
 ```
 * Step 6: 
 ```
@@ -79,7 +81,8 @@ python intel.py --model alexnet --seed 0 --batch 64 --learning_rate 1e-4 --epoch
 ```
 
 # Authors
-This repository was made solely by me, based on the experimental project from UETAI-Lab Handwritten Digits Recognizer:
+This repository was made solely by me, based on the experimental project from UETAI-Lab Handwritten Digits Recognizer.
+
 [Duy Dang](https://github.com/Tsun0193)
 
 # License
